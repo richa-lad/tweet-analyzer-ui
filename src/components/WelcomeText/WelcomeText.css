@@ -1,0 +1,94 @@
+.welcome-container {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 6rem;
+    gap: 1rem;
+    
+    position: absolute;
+    width: 60vw;
+    height: auto;
+    left: 0px;
+    top: 10rem;
+    
+    /* 00 dp */
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.outer-chunk {
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 1rem;
+gap: 1rem;
+
+width: 100%;
+height: fit-content;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.chunk-title {
+    width: 100%;
+    height: fit-content;
+    
+    /* Headline 6 */
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 2rem;
+    /* identical to box height, or 160% */
+    
+    letter-spacing: 0.2rem;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.chunk-text {
+    width: 100%;
+    height: fit-content;
+    
+    /* Body 2 */
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    letter-spacing: 0.25px;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}

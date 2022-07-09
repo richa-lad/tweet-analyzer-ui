@@ -89,7 +89,7 @@ app.get("/api/user", async (req, res) => {
     auth: {
       bearer: token,
     },
-    json: req.body,
+    json: true,
   };
 
   try {
@@ -120,7 +120,7 @@ app.get("/api/tweets", async (req, res) => {
     auth: {
       bearer: token,
     },
-    json: req.body,
+    json: true,
   };
 
   try {
@@ -140,7 +140,7 @@ app.get("/api/tweets", async (req, res) => {
   }
 });
 
-app.get("/welcome", (req, res) => {
+app.get("/api/welcome", (req, res) => {
   const response = [
     {
       title: "What does the RHOBH Text Analyser do?",
@@ -157,7 +157,7 @@ app.get("/welcome", (req, res) => {
   res.send(response);
 });
 
-app.get("/housewivesInfo", (req, res) => {
+app.get("/api/housewivesInfo", (req, res) => {
   const response = [
     {
       name: "Lisa Rinna",
