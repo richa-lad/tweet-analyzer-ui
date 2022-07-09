@@ -1,0 +1,61 @@
+.sideBarItem {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    width: 100%;
+    height: fit-content;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    border: none;
+}
+
+.sideBarItem.active {
+    /* States_Primary overlay/Focused */
+    background: rgba(98, 0, 238, 0.12);
+}
+
+.sideBarItem.inactive {
+    /* States_Primary overlay/Focused */
+    background: rgba(0, 0, 0, 0);
+}
+
+.sideBarItem:hover {
+    background: rgba(121, 48, 232, 0.551);
+    cursor: pointer;
+}
+
+.sideBarItem-text {
+    width: 397px;
+    height: 50px;
+    
+    /* Subtitle 1 */
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}

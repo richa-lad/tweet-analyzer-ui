@@ -1,10 +1,14 @@
+import Title from "./components/Title/Title";
+import SideBar from "./components/SideBar/SideBar";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+        <Title pageName="Welcome"></Title>
+        <SideBar></SideBar>
     </div>
   );
 }
 
 export default App;
+
