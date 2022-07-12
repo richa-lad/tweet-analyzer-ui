@@ -1,0 +1,76 @@
+.carousel {
+  padding-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+}
+
+/* gives us the illusion of a "centered" slide */
+.carousel__slider {
+  width: 100%;
+}
+
+/* gives us the illusion of spaces between the slides */
+.carousel__inner-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonBack___1mlaL, .buttonFirst___2rhFr, .buttonLast___2yuh0, .buttonNext___2mOCa, .buttonNext___3Lm3s, .dot___3c3SI {
+    border: none;
+    background: none;
+    color: white;
+    padding: none;
+}
+
+button:disabled{
+    color: rgba(255, 255, 255, 0.428);
+}
+
+svg.arrow {
+    filter:drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.175));
+}
+
+.loading-page {
+  position: relative;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading-phrase {
+  position: absolute;
+  top: 5rem;
+  padding: 5%;
+}
+
+.loading-animation {
+  position: absolute;
+  top: 10rem;
+  padding: 2%;
+}
+
+.carousel-header {
+  padding: 2rem;
+  color: rgb(228, 252, 255);
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.646));
+}
+
+.carousel-image {
+  border-radius: 50px;
+  height: 50%;
+  filter:drop-shadow(10px 10px 10px black);
+}
+
+.carousel-bio {
+  width: 90%;
+  padding-top: 3rem;
+  font-style: oblique;
+  color: rgba(0, 0, 0, 0.281);
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.646));
+  font-size: larger;
+}

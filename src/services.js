@@ -99,9 +99,9 @@ const getClassification = async (username) => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: {
+      body: JSON.stringify({
         name: username,
-      },
+      }),
     });
 
     return classification.json();

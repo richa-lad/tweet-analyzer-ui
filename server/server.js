@@ -144,67 +144,58 @@ app.get("/api/welcome", (req, res) => {
   const response = [
     {
       title: "What does the RHOBH Text Analyser do?",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      content: "The Real Housewives of Beverly Hills Tweet Analyser (RHOBH-TA for short) uses your twitter handle to ingest your most recent tweets. Using a pre-trained Natural Language (NL) Machine Learning (ML) model, your tweets are analysed and compared to the tweets of some of your favourite Real Housewives. There are nine housewives in total - you'll be told which housewife you're most like, as well as the next top four."
     },
     {
-      title: "How it Works",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      title: "How Does RHOBH-TA Work?",
+      content: "Using the TwitterAPI, the tweets of 9 different housewives (Lisa Rinna, Sutton Stracke, Garcelle Beauvais, Kyle Richards, Denise Richards, Yolanda Hadid, Erika Jayne, Dorit Kemsley, and Crystal Minkoff) were collected. Attributes about these tweets such as the number of likes and retweets they received, whether or not it was a quote tweet, and how many views it received, were also collected. Tweets were vectorised using the Keras Tokenizer, and a Neural Network was constructed (also using Keras) which combines these vectorised tweets with the other features previosly mentioned. Once trained, the weights were saved so that they could be loaded again for prediction. Using FastAPI, an endpoint is provided that accepts the user's Twitter handle, loads the pre-trained model weights, and makes a prediciton for each of the user's most recent tweets. The housewife they are most like is defined as the most commonly classified housewife. The front-end has been built using ReactJS."
     },
   ];
 
   res.send(response);
 });
 
+let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
 app.get("/api/housewivesInfo", (req, res) => {
-  const response = [
-    {
+  const response = {
+    lisarinna : {
       name: "Lisa Rinna",
-      username: "lisarinna",
-      bio: "rich!",
+      bio: lorem,
     },
-    {
+    KyleRichards: {
       name: "Kyle Richards",
-      username: "KyleRichards",
-      bio: "rich!",
+      bio: lorem,
     },
-    {
+    erikajayne: {
       name: "Erika Jayne",
-      username: "erikajayne",
-      bio: "rich!",
+      bio: lorem,
     },
-    {
+    GarcelleB: {
       name: "Garcelle Beauvais",
-      username: "GarcelleB",
-      bio: "rich!",
+      bio: lorem,
     },
-    {
+    doritkemsley1: {
       name: "Dorit Kemsley",
-      username: "doritkemsley1",
-      bio: "rich!",
+      bio: lorem,
     },
-    {
+    crystalsminkoff: {
       name: "Crystal Minkoff",
-      username: "crystalsminkoff",
-      bio: "rich!",
+      bio: lorem,
     },
-    {
+    DENISE_RICHARDS: {
       name: "Denise Richards",
-      sername: "DENISE_RICHARDS",
-      bio: "rich!",
+      bio: lorem,
     },
-    {
-      name: "Suttom Stracke",
-      username: "SuttonBStracke",
-      bio: "rich!",
+    SuttonBStracke: {
+      name: "Sutton Stracke",
+      bio: lorem,
     },
-    {
+    YolandaHadid: {
       name: "Yolanda Hadid",
-      username: "YolandaHadid",
-      bio: "rich!",
+      bio: lorem,
     },
-  ];
+  };
 
   res.send(response);
 });

@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { getWelcome } from "../../services";
-import "./WelcomeText.css";
+import "./Welcome.css";
 
 function WelcomeText() {
   const [welcomeChunks, setWelcomeChunks] = useState([]);

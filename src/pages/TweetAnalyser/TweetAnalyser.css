@@ -1,0 +1,108 @@
+.divider {
+    width: 50%;
+    height: 0px;
+    border-bottom: 1px solid #000000;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.search-page {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  gap: 1rem;
+
+  position: absolute;
+  width: 70vw;
+  height: auto;
+}
+
+.search-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1rem;
+  gap: 1rem;
+  width: 60%;
+  height: 1rem;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.search-bar {
+  width: 50vw;
+  height: 1rem;
+  background: #f7f2fcc8;
+  border-radius: 50px;
+  border: none;
+  padding: 1rem 2rem;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+  font-size: large;
+}
+
+.search-submit {
+  position: relative;
+  background: none;
+  border: none;
+  margin-left: -2rem;
+  cursor: pointer;
+  color: rgb(150, 150, 150);
+  filter: drop-shadow(2px 2px 2px rgb(255, 255, 255))
+}
+
+.loading-phrase {
+  padding: 5%;
+}
+
+@media screen and (max-width: 950px) {
+  .search-page {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    gap: 1rem;
+  
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+  
+  .search-bar {
+    width: 80vw;
+    height: 1rem;
+    background: #f7f2fcc8;
+    border-radius: 50px;
+    border: none;
+    padding: 1rem 1rem;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+    font-size: large;
+    text-overflow: clip;
+  }
+  .search-submit {
+    position: relative;
+    border: none;
+    margin-left: -2rem;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+}

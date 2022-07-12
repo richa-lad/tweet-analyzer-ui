@@ -1,0 +1,53 @@
+.bar-container {
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 1rem 0px;
+gap: 1rem;
+
+width: 100%;
+height: auto;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.bar-image {
+    width: 5rem;
+    height: 5rem;    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.bar-score {
+    width: 3rem;
+    height: auto;
+    
+    /* Headline 6 */
+    
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+    /* or 160% */
+    
+    letter-spacing: 0.05rem;
+    
+    color: #9b0acc;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}

@@ -12,7 +12,7 @@ function Title(props) {
   return (
     <div className="pageTitle">
       <h6 className="subheading">
-        Real Housewives of Beverly Hills Text Analyser
+        Real Housewives of Beverly Hills Tweet Analyser
       </h6>
       <h1 className="heading">{title}</h1>
       <div className="underline"></div>

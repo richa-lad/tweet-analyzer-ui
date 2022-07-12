@@ -37,8 +37,8 @@
     height: 50px;
     
     /* Subtitle 1 */
-    
-    font-family: 'Roboto Mono';
+    filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
+    font-family: 'Montserrat Alternates';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -49,7 +49,7 @@
     align-items: center;
     letter-spacing: 0.15px;
     
-    color: #000000;
+    color: #ffffff;
     
     
     /* Inside auto layout */
@@ -58,4 +58,43 @@
     order: 0;
     align-self: stretch;
     flex-grow: 1;
+}
+
+@media screen and (max-width: 950px) {
+    .sideBarItem {
+        /* Auto layout */
+        width: fit-content;
+        height: auto;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        border: none;
+    }
+
+    .sideBarItem-text {
+        width: fit-content;
+        height: auto;
+        overflow-x:visible;
+        overflow-wrap: break-word;
+        
+        /* Subtitle 1 */
+        
+        font-family: 'Montserrat Alternates';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 80%;
+        line-height: 1rem;
+        /* or 150% */
+        
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.15px;
+        
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 1;
+    }
 }

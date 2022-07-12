@@ -7,7 +7,7 @@ function SideBar() {
   const [pages, setPages] = useState([
     { name: "Welcome", state: "active" },
     { name: "Analyse My Tweets", state: "inactive" },
-    { name: "Who Are The Housewives", state: "inactive" },
+    { name: "Housewife Profiles", state: "inactive" },
   ]);
   const [sideBarItems, setSideBarItems] = useState([]);
   let temp = pages;

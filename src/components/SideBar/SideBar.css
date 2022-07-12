@@ -55,15 +55,16 @@
 
     /* Headline 4 */
 
-    font-family: 'Roboto Mono';
+    font-family: 'Montserrat Alternates';
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
     font-style: normal;
-    font-weight: 400;
+    font-weight: bolder;
     font-size: 34px;
     line-height: 36px;
     /* identical to box height, or 106% */
 
 
-    color: #000000;
+    color: #ffffff;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -83,7 +84,8 @@
     left: 10px;
     top: 69px;
 
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #ffffff;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.494));
 
     /* Inside auto layout */
 
@@ -111,4 +113,47 @@
     order: 1;
     flex-grow: 0;
     z-index: 1;
+}
+
+@media screen and (max-width: 950px) {
+    .sideNavBar {
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 0px;
+        gap: 10px;
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        top: 0px;
+        background: rgb(194, 240, 255);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: 30;
+    }
+
+    .sideNavBar-header {
+        display: none;
+    }
+
+    .sideNavBar-body {
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+    
+        width: 100%;
+        height: 80%;
+    
+        mix-blend-mode: normal;
+    
+        /* Inside auto layout */
+    
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        z-index: 1;
+    }
 }

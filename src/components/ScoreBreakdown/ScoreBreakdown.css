@@ -1,0 +1,63 @@
+.scoreBreakdown {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+
+  width: 100%;
+  height: 100%;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+.scoreBreakdown-title {
+  width: 15rem;
+  height: 2rem;
+
+  /* Headline 6 */
+
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  /* identical to box height, or 160% */
+
+  letter-spacing: 0.05rem;
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.scoreBreakdown-bars {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+
+  width: 60%;
+  height: auto;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
