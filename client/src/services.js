@@ -113,7 +113,7 @@ const getSetup = async (username) => {
 
 const getClassification = async (parameters) => {
   try {
-    const classification = await fetch(api("setup", true), {
+    const classification = await fetch(api("classify", true), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
