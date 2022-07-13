@@ -2,7 +2,7 @@ const api = (route, is_classifier = false) => {
   if (!is_classifier) {
     return `/api/${route}`;
   } else {
-    return `http://127.0.0.1:8000/${route}`;
+    return `https://rhobh-server.herokuapp.com/${route}`;
   }
 };
 
