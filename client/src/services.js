@@ -59,7 +59,7 @@ const getUsers = async () => {
 
 const getUser = async (username) => {
   try {
-    const user = await fetch(api(`/user?username=${username}`), {
+    const user = await fetch(api(`user?username=${username}`), {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
