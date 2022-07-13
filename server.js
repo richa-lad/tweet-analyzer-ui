@@ -203,9 +203,9 @@ app.get("/api/housewivesInfo", (req, res) => {
 console.log("NODE_ENV is", process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../build")));
+  app.use(express.static(path.join(__dirname, "/client/build")));
   app.get("*", (request, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"));
+    res.sendFile(path.join(__dirname, "/client/build", "index.html"));
   });
 }
 
