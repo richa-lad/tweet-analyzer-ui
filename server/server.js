@@ -8,7 +8,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 const get = util.promisify(request.get);
 
 app.use(bodyParser.json());
@@ -207,8 +207,6 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (request, res) => {
     res.sendFile(path.join(__dirname, "../build", "index.html"));
   });
-} else {
-  port = 3001;
 }
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
