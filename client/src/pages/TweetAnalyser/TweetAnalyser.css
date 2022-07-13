@@ -31,8 +31,8 @@
   align-items: center;
   padding: 5rem 1rem;
   gap: 1rem;
-  width: 60%;
-  height: 1rem;
+  width: 100%;
+  height: auto;
   /* Inside auto layout */
   flex: none;
   order: 0;
@@ -64,8 +64,19 @@
   filter: drop-shadow(2px 2px 2px rgb(255, 255, 255))
 }
 
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  height: auto;
+  position: relative;
+}
+
 .loading-phrase {
   padding: 5%;
+  position: absolute;
 }
 
 @media screen and (max-width: 950px) {

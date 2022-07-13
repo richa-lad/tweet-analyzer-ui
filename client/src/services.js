@@ -91,9 +91,9 @@ const getTweets = async (username) => {
   }
 };
 
-const getClassification = async (username) => {
+const getSetup = async (username) => {
   try {
-    const classification = await fetch(api("classify", true), {
+    const setup = await fetch(api("setup", true), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -102,6 +102,24 @@ const getClassification = async (username) => {
       body: JSON.stringify({
         name: username,
       }),
+    });
+
+    return setup.json();
+  } catch (err) {
+    console.log(err);
+    return err;
+  }
+};
+
+const getClassification = async (parameters) => {
+  try {
+    const classification = await fetch(api("setup", true), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(parameters),
     });
 
     return classification.json();
@@ -118,4 +136,5 @@ export {
   getUser,
   getUsers,
   getWelcome,
+  getSetup
 };

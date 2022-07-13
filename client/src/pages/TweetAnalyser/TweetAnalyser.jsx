@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import "./TweetAnalyser.css";
-import { getClassification, getUser, getHousewivesInfo } from "../../services";
+import { getSetup, getClassification, getUser, getHousewivesInfo } from "../../services";
 import ClassificationResult from "../../components/ClassificationResult/ClassificationResult"
 import ScoreBreakdown from "../../components/ScoreBreakdown/ScoreBreakdown";
 import { FaSearch } from "react-icons/fa";
@@ -29,11 +29,14 @@ function SearchBar() {
     setIsJustOpened(false);
     setIsLoading(true);
     console.log("classifying tweets");
+    let parameters;
     let results;
     if (userTwitterHandle[0] === "@") {
-      results = await getClassification(userTwitterHandle.slice(1));
+      parameters = await getSetup(userTwitterHandle.slice(1));
+      results = await getClassification(parameters);
     } else {
-      results = await getClassification(userTwitterHandle);
+      parameters = await getSetup(userTwitterHandle);
+      results = await getClassification(parameters);
     }
     // figure out which housewives had the top 5 scores
     // get profile pic and name and description of each top 5 housewives
@@ -148,10 +151,12 @@ function SearchBar() {
             </button>
           </form>
         </div>
+        <div className="loading">
           <PropagateLoader className="loading-animation" color={"#00e8ef"} size={30}></PropagateLoader>
           <div className="loading-phrase">
             <p>{loadingPhrase}</p>
           </div>
+        </div>
       </div>
     );
   } else if (isJustOpened && !isLoading) {
