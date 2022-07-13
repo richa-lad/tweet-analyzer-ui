@@ -8,7 +8,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-let port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 const get = util.promisify(request.get);
 
 app.use(bodyParser.json());
