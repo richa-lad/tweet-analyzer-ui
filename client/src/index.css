@@ -10,5 +10,12 @@ body {
   position: relative;
   background: linear-gradient(45deg, #adadad6a, #e73c7e53, #23a5d586, #23d5ab67);
   background-repeat: no-repeat;
-  background-size: 200vw 200vh;
+  height: 100vh;
+  background-size: 100vw 200vh;
+
+}
+
+div {
+  display: flex;
+  flex-direction: column;
 }

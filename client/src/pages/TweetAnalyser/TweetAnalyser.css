@@ -1,3 +1,11 @@
+.classification-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
 .divider {
     width: 50%;
     height: 0px;
@@ -18,7 +26,7 @@
   padding: 1rem 1rem;
   gap: 1rem;
 
-  position: absolute;
+  position: relative;
   width: 70vw;
   height: auto;
 }
@@ -33,10 +41,6 @@
   gap: 1rem;
   width: 100%;
   height: auto;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .search-bar {
@@ -86,21 +90,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 1rem;
-    gap: 1rem;
-  
     position: relative;
-    width: 100vw;
+    width: 90%;
     height: auto;
   }
   
   .search-bar {
-    width: 80vw;
+    position: relative;
+    width: 70vw;
     height: 1rem;
     background: #f7f2fcc8;
     border-radius: 50px;
     border: none;
-    padding: 1rem 1rem;
     /* Inside auto layout */
     flex: none;
     order: 0;

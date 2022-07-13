@@ -1,10 +1,12 @@
 .carousel {
+  position: relative;
   padding-top: 2rem;
     text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 70%;
+    width: 90%;
+    height: 100%;
 }
 
 /* gives us the illusion of a "centered" slide */
@@ -24,6 +26,12 @@
     background: none;
     color: white;
     padding: none;
+}
+
+.horizontalSlider___281Ls {
+  position: relative;
+  overflow: auto;
+  height: 100%;
 }
 
 button:disabled{
@@ -67,10 +75,20 @@ svg.arrow {
 }
 
 .carousel-bio {
-  width: 90%;
+  width: 100%;
   padding-top: 3rem;
   font-style: oblique;
   color: rgba(0, 0, 0, 0.281);
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.646));
-  font-size: larger;
+  font-size: 100%;
+}
+
+@media screen and (max-width: 950px) {
+
+.carousel-image {
+  border-radius: 50px;
+  height: 100%;
+  filter:drop-shadow(10px 10px 10px black);
+}
+
 }

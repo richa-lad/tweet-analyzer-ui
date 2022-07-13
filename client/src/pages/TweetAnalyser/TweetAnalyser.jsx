@@ -115,7 +115,7 @@ function SearchBar() {
             </button>
           </form>
         </div>
-
+        <div className="classification-container">
         <ClassificationResult
           url={topHousewifeInfo.img_url}
           name={topHousewifeInfo.name}
@@ -123,6 +123,7 @@ function SearchBar() {
         ></ClassificationResult>
         <div className="divider"></div>
         <ScoreBreakdown next_four={runnerUpHousewives}></ScoreBreakdown>
+      </div>
       </div>
     );
   } else if (isLoading && !isJustOpened) {
