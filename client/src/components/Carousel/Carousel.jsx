@@ -21,12 +21,18 @@ function Carousel() {
     const temp_slides = [];
     for (let i = 0; i < usernames.length; i++) {
       let res = await getUser(usernames[i]);
-      let twitterApiInfo = res.body.data[0];
-      temp.push({
-        name: housewives[usernames[i]].name,
-        bio: housewives[usernames[i]].bio,
-        img_url: `${twitterApiInfo.profile_image_url.slice(0, twitterApiInfo.profile_image_url.length-11)}.jpg`,
-      });
+      try {
+        let twitterApiInfo = res.body.data[0];
+        temp.push({
+          name: housewives[usernames[i]].name,
+          bio: housewives[usernames[i]].bio,
+          img_url: `${twitterApiInfo.profile_image_url.slice(0, twitterApiInfo.profile_image_url.length-11)}.jpg`,
+        });
+      } catch (err) {
+          console.log("Exception occurred - likely because the username has been deleted");
+          console.log(err);
+      }
+      
     }
     for (let i = 0; i < temp.length; i++) {
       temp_slides.push(
