@@ -5,12 +5,14 @@ const request = require("request");
 const path = require("path");
 const http = require("http");
 const dotenv = require("dotenv");
+var cors = require('cors');
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3001;
 const get = util.promisify(request.get);
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
