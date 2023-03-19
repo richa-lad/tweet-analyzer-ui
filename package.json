@@ -9,7 +9,8 @@
     "http": "^0.0.1-security",
     "path": "^0.12.7",
     "request": "^2.88.2",
-    "util": "^0.12.4"
+    "util": "^0.12.4",
+    "cors": "^2.0.0"
   },
   "scripts": {
     "start": "node server.js",
