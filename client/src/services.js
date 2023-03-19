@@ -2,7 +2,7 @@ const api = (route, is_classifier = false) => {
   if (!is_classifier) {
     return `/api/${route}`;
   } else {
-    return `https://tweet-analyzer-server.onrender.com/${route}`;
+    return `https://tweet-analyser-server.onrender.com/${route}`;
   }
 };
 
