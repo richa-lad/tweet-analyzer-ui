@@ -42,25 +42,32 @@ function SearchBar() {
     // get profile pic and name and description of each top 5 housewives
     const results_length = Object.keys(results).length;
     const housewives = await getHousewivesInfo();
+    let topHousewifeIsSet = false;
     let others = [];
     for (let i = 0; i < results_length; i++) {
       let res = await getUser(results[`${i}`].username);
-      let twitterApiInfo = res.body.data[0];
-      if (i === 0) {
-        // top housewife
-        setTopHousewifeInfo({
-          name: housewives[twitterApiInfo.username].name,
-          score: results[`${i}`].score,
-          img_url: twitterApiInfo.profile_image_url,
-          bio: housewives[twitterApiInfo.username].bio,
-        });
-      } else {
-        others.push({
-          name: housewives[twitterApiInfo.username].name,
-          score: results[`${i}`].score,
-          img_url: twitterApiInfo.profile_image_url,
-        });
+      try {
+        let twitterApiInfo = res.body.data[0];
+        if (!topHousewifeIsSet) {
+          // top housewife
+          setTopHousewifeInfo({
+            name: housewives[twitterApiInfo.username].name,
+            score: results[`${i}`].score,
+            img_url: twitterApiInfo.profile_image_url,
+            bio: housewives[twitterApiInfo.username].bio,
+          });
+          topHousewifeIsSet = true;
+        } else {
+          others.push({
+            name: housewives[twitterApiInfo.username].name,
+            score: results[`${i}`].score,
+            img_url: twitterApiInfo.profile_image_url,
+          });
+        }
+      } catch (e) {
+        console.log(e);
       }
+      
     }
     setRunnerUpHousewives(others);
     setIsLoading(false);
